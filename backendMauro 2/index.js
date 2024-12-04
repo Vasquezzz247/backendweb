@@ -28,7 +28,7 @@ if (!fs.existsSync(uploadsDir)) {
 db.connect();
 
 app.use(express.json());
-app.use(cors({ origin: "https://6750131a42edd01831b032b5--beamish-yeot-cf07b9.netlify.app" }));
+app.use(cors({ origin: "https://docletsv.netlify.app" }));
 
 app.use("/uploads", express.static(uploadsDir));
 app.use("/api", routes);
@@ -37,5 +37,5 @@ app.use(errorHandler);
 
 const PORT = envconfig.PORT || 3000;
 app.listen(PORT, () => {
-  debug(`Servidor corriendo en https://6750131a42edd01831b032b5--beamish-yeot-cf07b9.netlify.app:${PORT}`);
+  debug(`Servidor corriendo en https://docletsv.netlify.app:${PORT}`);
 });
